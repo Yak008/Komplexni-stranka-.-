@@ -1,0 +1,309 @@
+/* Proměnné--------------------------------------------------------------------------------------*/
+
+:root {
+  --hover-background: rgb(228, 151, 9);
+  --text-color-light: black;
+  --text-color-dark: white;
+  --dark-background: rgb(19, 48, 74);
+  --light-background: rgb(219, 219, 195);
+}
+
+/* Body-------------------------------------------------------------------------------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--light-background);
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+/*Obecné třídy--------------------------------------------------------------------------------------*/
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.block {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+button {
+  background-color: var(--hover-background);
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  color: black;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Header-------------------------------------------------------------------------------------- */
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 10px;
+  position: relative;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--text-color-light);
+}
+
+/* Burger menu-------------------------------------------------------------------------------------- */
+
+.burger-menu {
+  color: var(--text-color-light);
+  margin-right: 10px;
+  text-align: end;
+}
+
+.burger-menu:hover {
+  color: var(--hover-background);
+}
+
+body.dark-mode .burger-menu:hover {
+  color: var(--hover-background);
+}
+
+.menu div:hover {
+  background-color: var(--hover-background);
+}
+
+/* Menu navigace-------------------------------------------------------------------------------------- */
+
+.menu {
+  display: none;
+}
+
+.menu-phone {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-item {
+  font-size: 2em;
+  text-decoration: underline;
+}
+
+/* Tlačítko na změnu barevného režimu--------------------------------------------------------------------------------------*/
+
+.color-mode {
+  font-size: 1em;
+  height: 40px;
+}
+
+.dark-mode {
+  color: white;
+  background-color: rgb(19, 48, 74);
+}
+
+body.dark-mode a {
+  color: white;
+}
+
+body.dark-mode .burger-menu {
+  color: white;
+}
+
+/* Main--------------------------------------------------------------------------------------*/
+
+.main-text {
+  text-align: center;
+  margin: 20px;
+}
+
+.main-text h1 {
+  font-size: 30px;
+}
+
+.main-text p {
+  font-size: 20px;
+}
+
+.mood-wrapper h2 {
+  text-align: center;
+}
+
+/* Galerie obrázků-------------------------------------------------------------------------------------- */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
+}
+
+.img-wrapper {
+  overflow: hidden;
+  border-radius: 10%;
+}
+
+.gallery img {
+  transition: all 0.3 linear;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Formulář-------------------------------------------------------------------------------------- */
+
+.form {
+  text-align: center;
+  padding: 20px;
+}
+
+.email,
+.password1,
+.password2 {
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(99, 99, 99);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  outline: none;
+  color: rgb(99, 99, 99);
+  text-align: center;
+}
+
+.email::placeholder,
+.password1::placeholder,
+.password2::placeholder {
+  color: rgb(99, 99, 99);
+}
+
+form input[type="submit"] {
+  width: 100px;
+  height: 30px;
+  background-color: var(--hover-background);
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  color: black;
+}
+
+body.dark-mode .email,
+body.dark-mode .password1,
+body.dark-mode .password2 {
+  border-bottom: 2px solid white;
+}
+
+body.dark-mode .email::placeholder,
+body.dark-mode .password1::placeholder,
+body.dark-mode .password2::placeholder {
+  color: white;
+}
+
+.form input {
+  margin-bottom: 10px;
+}
+
+body.dark-mode input {
+  color: white;
+}
+
+/* Tlačítko na odscrollování nahoru--------------------------------------------------------------------------------------  */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  margin-bottom: 20px;
+}
+
+/* Footer-------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------*/
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+}
+
+/* Media query pro responzivní design */
+
+@media (min-width: 768px) {
+  /* Header-------------------------------------------------------------------------------------- */
+
+  header {
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+    position: relative;
+  }
+
+  /* Burger menu-------------------------------------------------------------------------------------- */
+
+  .burger-menu {
+    display: none !important;
+  }
+
+  /* Menu navigace-------------------------------------------------------------------------------------- */
+
+  .menu {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .nav-item {
+    font-size: 1em;
+    text-decoration: none;
+  }
+
+  /* Tlačítko na změnu barevného režimu--------------------------------------------------------------------------------------*/
+
+  .color-mode {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+  }
+
+  /* Main--------------------------------------------------------------------------------------*/
+  /* Galerie obrázků-------------------------------------------------------------------------------------- */
+
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .mood-wrapper {
+    width: 30%;
+  }
+
+  /* Formulář-------------------------------------------------------------------------------------- */
+
+  .email,
+  .password1,
+  .password2 {
+    width: 25%;
+  }
+}

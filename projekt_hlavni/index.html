@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8b2371e4e3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <a class="burger-menu" href="#"
+        ><i class="burger-menu fa-solid fa-bars fa-3x"></i
+      ></a>
+
+      <section class="menu">
+        <div>
+          <a class="nav-item" href="#">HUDBA</a>
+        </div>
+        <div><a class="nav-item" href="#">KNIHY</a></div>
+        <div><a class="nav-item" href="#">FILMY</a></div>
+      </section>
+
+      <button class="color-mode">LIGHT / DARK MODE</button>
+    </header>
+
+    <main>
+      <section class="main-text">
+        <h1>Jak se dnes máte?</h1>
+        <p>
+          Řekněte nám jak se dnes máte a my Vám doporučíme to co by vás mohlo
+          bavit!
+        </p>
+      </section>
+
+      <section class="gallery">
+        <div class="mood-wrapper">
+          <h2>Dobře</h2>
+          <div class="img-wrapper">
+            <img src="./img/happy.png" alt="happy emoji" class="happy" />
+          </div>
+        </div>
+
+        <div class="mood-wrapper">
+          <h2>Špatně</h2>
+          <div class="img-wrapper">
+            <img src="./img/sad.png" alt="sad emoji" class="sad" />
+          </div>
+        </div>
+
+        <div class="mood-wrapper">
+          <h2>Neutrálně</h2>
+          <div class="img-wrapper">
+            <img
+              src="./img/straight.png"
+              alt="straight face emoji"
+              class="straight"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="form">
+        <form>
+          <h2>Zaregistrujte se</h2>
+          <p class="notificationEmail none">Email je ve špatném tvaru!</p>
+          <p class="notificationPassword none">Hesla se musí shodovat!</p>
+
+          <input type="email" placeholder="Email" class="email" /> <br />
+          <input type="password" placeholder="Heslo" class="password1" /> <br />
+          <input type="password" placeholder="Heslo znovu" class="password2" />
+          <br />
+          <input type="submit" value="Registrovat" />
+        </form>
+      </section>
+
+      <button class="scroll-to-top">Nahoru</button>
+    </main>
+
+    <footer>Jáchym Kahanec 2025</footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
